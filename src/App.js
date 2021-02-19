@@ -8,10 +8,10 @@ function App() {
   const [decTimer, setDecTimer] = useState(null);
 
   const incFunc = () => {
-    setWaterHeight(height => height < 100 ? height+20 : height);
+    setWaterHeight(height => height < 100 ? height+1 : height);
   }
   const decFunc = () => {
-    setWaterHeight(height => height > 0 ? height-20: height);
+    setWaterHeight(height => height > 0 ? height-1: height);
   }
 
   const onIncrease = () => {    
@@ -21,8 +21,8 @@ function App() {
     }, 0)
 
     setTimeout(function (){
-      setIncTimer(setInterval(incFunc, 2000));
-    }, 2000)    
+      setIncTimer(setInterval(incFunc, 100));
+    }, 100)    
   }
 
   const onDecrease = () => {
@@ -32,8 +32,8 @@ function App() {
     }, 0)
 
     setTimeout(function (){
-      setDecTimer( setInterval(decFunc, 2000) );
-    }, 2000)
+      setDecTimer( setInterval(decFunc, 100) );
+    }, 100)
   }
 
   return (
