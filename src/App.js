@@ -3,19 +3,18 @@ import './App.css';
 
 function App() {
   const [waterHeight, setWaterHeight] = useState(0);
-
-  const incFunc = () => {
-    if(waterHeight < 100) setWaterHeight((height)=> height+20);
-  }
-  const decFunc = () => {
-    if( waterHeight > 0 ) setWaterHeight((height)=> height-20);
-  }
   
   const [incTimer, setIncTimer] = useState(null);
   const [decTimer, setDecTimer] = useState(null);
 
-  const onIncrease = () => {
-    
+  const incFunc = () => {
+    setWaterHeight(height => height < 100 ? height+20 : height);
+  }
+  const decFunc = () => {
+    setWaterHeight(height => height > 0 ? height-20: height);
+  }
+
+  const onIncrease = () => {    
     setTimeout(function (){
       if(decTimer || waterHeight === 0) window.clearInterval(decTimer);
       if(incTimer || waterHeight === 100) window.clearInterval(incTimer);
