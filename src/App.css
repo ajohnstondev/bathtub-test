@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+  display: inline-block;
+  align-items: center;
+  margin: 0 auto
+}
+
+.bathtub {
+  border: 1px solid;
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto
+}
+
+.water {
+  width: 100px;
+  background-color: white;
+  height: 100px;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 50px;
+}
